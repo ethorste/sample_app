@@ -5,9 +5,11 @@ gem 'rails', '3.2.3'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-group :development, :test do
+group :development do
   gem 'sqlite3'
   gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'spork'
 end
 
 # Gems used only for assets and not required
@@ -25,7 +27,12 @@ end
 gem 'jquery-rails'
 
 group :test do
+  gem 'rspec-rails'
   gem 'capybara'
+  gem 'rb-inotify'
+  gem 'libnotify'
+  gem 'spork'
+  gem 'guard-spork'
 end
 
 # For postgresql in heroku env
